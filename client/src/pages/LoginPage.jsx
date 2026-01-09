@@ -29,12 +29,15 @@ function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-cover bg-center flex items-center justify-center gap-8 sm:justify-evenly max-sm:flex-col backdrop-blur-2xl">
+    <div className="min-h-screen flex items-center justify-center gap-8 sm:justify-evenly max-sm:flex-col">
       {/* -------- left -------- */}
-      <img src={assets.logo_big} alt="" className="w-[min(30vw,250px)]" />
+      <div className="flex flex-col items-center gap-4">
+        <img src={assets.logo_big} alt="" className="w-[min(30vw,250px)] drop-shadow-[0_0_15px_rgba(0,123,255,0.5)]" />
+        <h1 className="text-4xl font-bold tracking-tight">AnyChat</h1>
+      </div>
 
       {/* -------- right -------- */}
-      <form onSubmit={onSubmitHandler} className="border-2 bg-white/8 text-white border-gray-500 p-6 flex flex-col gap-6 rounded-lg shadow-lg">
+      <form onSubmit={onSubmitHandler} className="glass-morphism text-white p-8 flex flex-col gap-6 rounded-2xl shadow-2xl w-full max-w-md">
         <h2 className="font-medium text-2xl flex justify-between items-center">
           {currState}
           {isDataSubmitted && (
@@ -93,7 +96,7 @@ function LoginPage() {
 
         <button
           type="submit"
-          className="py-3 bg-gradient-to-r from-purple-400 to-violet-600 text-white rounded-md cursor-pointer"
+          className="py-3 bg-primary hover:bg-secondary text-white rounded-lg cursor-pointer font-medium shadow-lg shadow-primary/20"
         >
           {currState === "Sign up" ? "Create Account" : "Login Now"}
         </button>
@@ -107,15 +110,15 @@ function LoginPage() {
           {currState === "Sign up" ? (
             <p className="text-sm text-gray-600">
               Already have an account?{" "}
-              <span className="font-medium text-violet-500 cursor-pointer"
+              <span className="font-medium text-primary cursor-pointer hover:underline"
               onClick={()=>{setCurrState("Login"); setIsDataSubmitted(false)}}>
                 Login here
               </span>
             </p>
           ) : (
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-gray-400">
               Create an account{" "}
-              <span className="font-medium text-violet-500 cursor-pointer"
+              <span className="font-medium text-primary cursor-pointer hover:underline"
                onClick={()=>{setCurrState("Sign up");}}>
                 Click here
               </span>

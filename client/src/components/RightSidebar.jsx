@@ -16,7 +16,7 @@ const RightSidebar = () => {
   return (
     selectedUser && (
       <div
-        className={`bg-[#8185b2]/10 text-white w-full relative overflow-y-scroll ${
+        className={`glass-morphism text-white w-full relative overflow-y-scroll ${
           selectedUser ? "max-md:hidden" : ""
         }`}
       >
@@ -53,7 +53,7 @@ const RightSidebar = () => {
           </div>
         </div>
 
-        <button onClick={() => logout()} className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-400 to-violet-600 text-white border-none text-sm font-light py-2 px-20 rounded-full cursor-pointer">
+        <button onClick={() => logout()} className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 text-sm font-medium py-2 px-16 rounded-full cursor-pointer transition-all">
           Logout
         </button>
       </div>

@@ -1,2 +1,2 @@
-# QuickChat
+# AnyChat
 This is a real time chat application

@@ -87,10 +87,10 @@ const ChatContainer = () => {
               />
             ) : (
               <p
-                className={`p-2 max-w-[200px] md:text-sm font-light rounded-lg mb-8 break-all bg-violet-500/30 text-white ${
+                className={`p-3 max-w-[250px] md:text-sm font-normal rounded-2xl mb-8 break-all shadow-md ${
                   msg.senderId === authUser._id
-                    ? "rounded-br-none"
-                    : "rounded-bl-none"
+                    ? "rounded-br-none bg-primary text-white"
+                    : "rounded-bl-none glass-morphism text-white"
                 }`}
               >
                 {msg.text}
@@ -150,9 +150,10 @@ const ChatContainer = () => {
       </div>
     </div>
   ) : (
-    <div className="flex flex-col items-center justify-center text-gray-500 bg-white/10 max-md:hidden">
-      <img src={assets.logo_icon} alt="" className="max-w-16" />
-      <p className="text-lg font-medium text-white">Chat anytime, anywhere</p>
+    <div className="flex flex-col items-center justify-center text-gray-400 bg-black/20 max-md:hidden">
+      <img src={assets.logo_icon} alt="" className="max-w-16 drop-shadow-[0_0_10px_rgba(0,123,255,0.3)] mb-4" />
+      <p className="text-xl font-semibold text-white tracking-wide">AnyChat</p>
+      <p className="text-sm">Chat anytime, anywhere</p>
     </div>
   );
 };
