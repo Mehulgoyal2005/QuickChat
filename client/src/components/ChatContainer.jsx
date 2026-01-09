@@ -62,7 +62,7 @@ const ChatContainer = () => {
             <span className="w-2 h-2 rounded-full bg-green-500"></span>
           )}
         </p>
-        <img
+        <img 
           onClick={() => setSelectedUser(null)}
           src={assets.arrow_icon}
           alt=""
